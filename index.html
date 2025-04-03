@@ -1,0 +1,59 @@
+<!-- SIMPLE CALCULATOR PROJECT -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=width=device-width, initial-scale=1.0">
+    <title>MyCalculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ------- Display history feature start ---------------------------------------------------------------- -->
+    <button onclick="clearHistory()" id="clearHistory" data-tooltip="Clear all history">Clear History</button>
+
+    <button id="recoverHistory" onclick="recoverHistory()" disabled>Recover History</button>
+
+    <div class="mainContainer2">
+        <!-- History Section -->
+        <h3>Calculation History: </h3>
+        <ul id="historyList"></ul>
+    </div>
+
+    <div class="mainContainer">
+        <div class="inputText">
+            <textarea id="outputBox1"></textarea>
+        </div>
+
+        <div class="myButtons">
+            <!-- -----------------Special Features------------------------------ -->
+            
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="calculateSquare()" data-tooltip="Square the value">x²</button>
+            <button onclick="moveCursorRight()" data-tooltip="Move cursor right">→</button>
+            <button onclick="moveCursorLeft()" data-tooltip="Move cursor left">←</button>
+
+            
+            <!-- ---------------------------------------------------------- -->
+            <button onclick="appendValue(' % ')">%</button>
+            <button onclick="appendValue('/')">/</button>
+            <button onclick="appendValue('*')">x</button>
+            <button onclick="appendValue('-')">-</button>
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="appendValue('+')">+</button>
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="calculateResult()">=</button>
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="appendValue('.')">.</button>
+            <button onclick="appendValue('0')" class="zero">0</button>
+        </div>
+    </div>
+    <script src="hello.js"></script>
+</body>
+</html>
